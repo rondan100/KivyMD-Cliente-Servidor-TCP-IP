@@ -14,7 +14,7 @@ from libs.baseclass.dialog_change_theme import KitchenSinkDialogChangeTheme
 from libs.baseclass.expansionpanel import KitchenSinkExpansionPanelContent
 
 from libs.baseclass.list_items import (  # NOQA: F401
-    KitchenSinkOneLineLeftIconItem,
+    KitchenSinkOneLineLeftIconItem
 )
 
 if getattr(sys, "frozen", False):  # bundle mode with PyInstaller

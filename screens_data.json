@@ -280,11 +280,11 @@
       'icon': 'tooltip-text-outline'
   },
   'Navigation Drawer': {
-      'kv_string': 'navigation_drawer',
-      'Import': 'from libs.baseclass.navigation_drawer import KitchenSinkNavigationDrawer',
-      'Factory': 'KitchenSinkNavigationDrawer()',
-      'name_screen': 'navigation drawer',
-      'object': 0,
-      'icon': 'dock-left'
-  }
+    'kv_string': 'navigation_drawer',
+    'Import': 'from libs.baseclass.navigation_drawer import KitchenSinkNavigationDrawer',
+    'Factory': 'KitchenSinkNavigationDrawer()',
+    'name_screen': 'navigation drawer',
+    'object': 0,
+    'icon': 'dock-left'
+}
 }

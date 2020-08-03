@@ -28,11 +28,17 @@ class KitchenSinkItemConfirm(OneLineAvatarIconListItem):
 
 
 class KitchenSinkDialogs(Screen):
+    from cliente import cliente
+
     app = ObjectProperty()
     simple_dialog = None
     alert_dialog = None
     custom_dialog = None
     confirmation_dialog = None
+
+    def printar(self, instancia):
+        print("text")
+        self.alert_dialog.dismiss()
 
     def show_example_confirmation_dialog(self):
         if not self.confirmation_dialog:
@@ -58,7 +64,8 @@ class KitchenSinkDialogs(Screen):
                         text_color=self.app.theme_cls.primary_color,
                     ),
                     MDFlatButton(
-                        text="OK", text_color=self.app.theme_cls.primary_color
+                        text="OK",
+                        text_color=self.app.theme_cls.primary_color,
                     ),
                 ],
             )
@@ -107,16 +114,17 @@ class KitchenSinkDialogs(Screen):
     def show_example_alert_dialog(self):
         if not self.alert_dialog:
             self.alert_dialog = MDDialog(
-                title="Reset settings?",
-                text="This will reset your device to its default factory settings.",
+                title="Conectar ao servidor?",
+                text="Isso irá permitirá que você envie dados ao servidor.",
                 buttons=[
                     MDFlatButton(
-                        text="CANCEL",
+                        text="CANCELAR",
                         text_color=self.app.theme_cls.primary_color,
                     ),
                     MDFlatButton(
-                        text="ACCEPT",
+                        text="ACEITAR",
                         text_color=self.app.theme_cls.primary_color,
+                        on_release=self.cliente,
                     ),
                 ],
             )
